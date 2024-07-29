@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StartPageViewController.swift
 //  BrewLand
 //
 //  Created by Lazzat Seiilova on 28.07.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartPageViewController: UIViewController {
     
     private let imageView: UIImageView = {
         let image = UIImage(named: "orangeCup")
