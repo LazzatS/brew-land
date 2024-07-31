@@ -13,6 +13,7 @@
 		122E8C482C567AB100A71DBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122E8C472C567AB100A71DBA /* Assets.xcassets */; };
 		122E8C4B2C567AB100A71DBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122E8C492C567AB100A71DBA /* LaunchScreen.storyboard */; };
 		122E8C532C5817B300A71DBA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E8C522C5817B300A71DBA /* SignUpViewController.swift */; };
+		122E8C562C5ABE7100A71DBA /* BLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E8C552C5ABE7100A71DBA /* BLTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		122E8C4A2C567AB100A71DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		122E8C4C2C567AB100A71DBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		122E8C522C5817B300A71DBA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		122E8C552C5ABE7100A71DBA /* BLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		122E8C3D2C567AB000A71DBA /* BrewLand */ = {
 			isa = PBXGroup;
 			children = (
+				122E8C542C5ABE5800A71DBA /* Views */,
 				122E8C3E2C567AB000A71DBA /* AppDelegate.swift */,
 				122E8C402C567AB000A71DBA /* SceneDelegate.swift */,
 				122E8C422C567AB000A71DBA /* StartPageViewController.swift */,
@@ -65,6 +68,14 @@
 				122E8C522C5817B300A71DBA /* SignUpViewController.swift */,
 			);
 			path = BrewLand;
+			sourceTree = "<group>";
+		};
+		122E8C542C5ABE5800A71DBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				122E8C552C5ABE7100A71DBA /* BLTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 				122E8C432C567AB000A71DBA /* StartPageViewController.swift in Sources */,
 				122E8C3F2C567AB000A71DBA /* AppDelegate.swift in Sources */,
 				122E8C532C5817B300A71DBA /* SignUpViewController.swift in Sources */,
+				122E8C562C5ABE7100A71DBA /* BLTextField.swift in Sources */,
 				122E8C412C567AB000A71DBA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

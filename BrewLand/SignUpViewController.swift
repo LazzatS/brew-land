@@ -41,6 +41,18 @@ class SignUpViewController: UIViewController {
         return view
     }()
     
+    private lazy var phoneTextField: BLTextField = {
+        let textField = BLTextField(placeholder: "Email or phone number")
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+    }()
+    
+    private var passwordTextField: BLTextField = {
+        let textField = BLTextField(placeholder: "Password")
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -58,6 +70,22 @@ class SignUpViewController: UIViewController {
         NSLayoutConstraint.activate([
             loginStackView.topAnchor.constraint(equalTo: signUpLabel.bottomAnchor, constant: 32),
             loginStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        view.addSubview(phoneTextField)
+        NSLayoutConstraint.activate([
+            phoneTextField.topAnchor.constraint(equalTo: loginStackView.bottomAnchor, constant: 32),
+            phoneTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            phoneTextField.widthAnchor.constraint(equalToConstant: view.frame.width - 32),
+            phoneTextField.heightAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        view.addSubview(passwordTextField)
+        NSLayoutConstraint.activate([
+            passwordTextField.topAnchor.constraint(equalTo: phoneTextField.bottomAnchor, constant: 16),
+            passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            passwordTextField.widthAnchor.constraint(equalToConstant: view.frame.width - 32),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
 }
