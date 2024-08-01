@@ -12,7 +12,7 @@ class SignUpViewController: UIViewController {
     private lazy var signUpLabel: UILabel = {
         let label = UILabel()
         label.text = "Sign Up"
-        label.textColor = .label
+        label.textColor = BLColor.Label.primary
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -20,7 +20,7 @@ class SignUpViewController: UIViewController {
     private lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.text = "Already have an account?"
-        label.textColor = .secondaryLabel
+        label.textColor = BLColor.Label.secondary
         return label
     }()
     
@@ -55,7 +55,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = BLColor.Background.primary
         setup()
     }
     

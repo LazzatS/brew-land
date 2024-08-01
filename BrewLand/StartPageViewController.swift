@@ -21,7 +21,7 @@ class StartPageViewController: UIViewController {
        let label = UILabel()
         label.text = "Brew Land"
         label.font = UIFont.systemFont(ofSize: 75, weight: .bold)
-        label.textColor = .label
+        label.textColor = BLColor.Label.primary
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -30,7 +30,7 @@ class StartPageViewController: UIViewController {
        let label = UILabel()
         label.text = "Your perfect cup awaits"
         label.font = UIFont.systemFont(ofSize: 28, weight: .semibold)
-        label.textColor = .secondaryLabel
+        label.textColor = BLColor.Label.secondary
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -40,7 +40,7 @@ class StartPageViewController: UIViewController {
        let label = UILabel()
         label.text = "Explore, order, and elevate your coffee experience anywhere!"
         label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
-        label.textColor = .tertiaryLabel
+        label.textColor = BLColor.Label.tertiary
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -49,8 +49,8 @@ class StartPageViewController: UIViewController {
     private let startButton: UIButton = {
         let button = UIButton()
         button.setTitle("Get your coffee", for: .normal)
-        button.setTitleColor(.systemBackground, for: .normal)
-        button.backgroundColor = .label
+        button.setTitleColor(BLColor.Background.primary, for: .normal)
+        button.backgroundColor = BLColor.Label.primary
         button.layer.cornerRadius = 30
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -58,7 +58,7 @@ class StartPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = BLColor.Background.primary
         configure()
         setup()
     }
