@@ -12,7 +12,9 @@ enum BLColor {
         static let primary = UIColor.systemBackground
     }
     
-    enum Button {}
+    enum Button {
+        static let active = UIColor.systemBlue
+    }
     
     enum Label {
         static let primary = UIColor.label

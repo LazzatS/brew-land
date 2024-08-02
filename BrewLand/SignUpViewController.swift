@@ -53,6 +53,16 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
+    private lazy var signInButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Click Me", for: .normal)
+        button.backgroundColor = BLColor.Button.active
+        button.setTitleColor(UIColor.systemBlue, for: .normal)
+        button.layer.cornerRadius = 30
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = BLColor.Background.primary
@@ -86,6 +96,14 @@ class SignUpViewController: UIViewController {
             passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             passwordTextField.widthAnchor.constraint(equalToConstant: view.frame.width - 32),
             passwordTextField.heightAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        view.addSubview(signInButton)
+        NSLayoutConstraint.activate([
+            signInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 16),
+            signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            signInButton.widthAnchor.constraint(equalToConstant: view.frame.width - 32),
+            signInButton.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
 }
