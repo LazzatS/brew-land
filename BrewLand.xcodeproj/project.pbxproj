@@ -15,6 +15,11 @@
 		122E8C532C5817B300A71DBA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E8C522C5817B300A71DBA /* SignUpViewController.swift */; };
 		122E8C562C5ABE7100A71DBA /* BLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E8C552C5ABE7100A71DBA /* BLTextField.swift */; };
 		122E8C582C5AC88C00A71DBA /* BLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E8C572C5AC88C00A71DBA /* BLColor.swift */; };
+		12FC93F92C5D73B7006B500A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC93F82C5D73B7006B500A /* MenuViewController.swift */; };
+		12FC93FB2C5D752F006B500A /* CategoriesMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC93FA2C5D752F006B500A /* CategoriesMenuView.swift */; };
+		12FC93FD2C5F959B006B500A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC93FC2C5F959B006B500A /* CategoryCollectionViewCell.swift */; };
+		12FC94012C5F9B99006B500A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC94002C5F9B99006B500A /* Category.swift */; };
+		12FC94042C5FA0EB006B500A /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC94032C5FA0EB006B500A /* String+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		122E8C522C5817B300A71DBA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		122E8C552C5ABE7100A71DBA /* BLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTextField.swift; sourceTree = "<group>"; };
 		122E8C572C5AC88C00A71DBA /* BLColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLColor.swift; sourceTree = "<group>"; };
+		12FC93F82C5D73B7006B500A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		12FC93FA2C5D752F006B500A /* CategoriesMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesMenuView.swift; sourceTree = "<group>"; };
+		12FC93FC2C5F959B006B500A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		12FC94002C5F9B99006B500A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		12FC94032C5FA0EB006B500A /* String+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,8 @@
 		122E8C3D2C567AB000A71DBA /* BrewLand */ = {
 			isa = PBXGroup;
 			children = (
+				12FC94022C5FA0A0006B500A /* Extensions */,
+				12FC93FF2C5F9B8A006B500A /* Model */,
 				122E8C542C5ABE5800A71DBA /* Views */,
 				122E8C3E2C567AB000A71DBA /* AppDelegate.swift */,
 				122E8C402C567AB000A71DBA /* SceneDelegate.swift */,
@@ -69,6 +81,8 @@
 				122E8C4C2C567AB100A71DBA /* Info.plist */,
 				122E8C522C5817B300A71DBA /* SignUpViewController.swift */,
 				122E8C572C5AC88C00A71DBA /* BLColor.swift */,
+				12FC93F82C5D73B7006B500A /* MenuViewController.swift */,
+				12FC93FE2C5F95A9006B500A /* Categories */,
 			);
 			path = BrewLand;
 			sourceTree = "<group>";
@@ -79,6 +93,31 @@
 				122E8C552C5ABE7100A71DBA /* BLTextField.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		12FC93FE2C5F95A9006B500A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				12FC93FA2C5D752F006B500A /* CategoriesMenuView.swift */,
+				12FC93FC2C5F959B006B500A /* CategoryCollectionViewCell.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		12FC93FF2C5F9B8A006B500A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				12FC94002C5F9B99006B500A /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12FC94022C5FA0A0006B500A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12FC94032C5FA0EB006B500A /* String+Utilities.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +191,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				122E8C432C567AB000A71DBA /* StartPageViewController.swift in Sources */,
+				12FC94012C5F9B99006B500A /* Category.swift in Sources */,
+				12FC93FB2C5D752F006B500A /* CategoriesMenuView.swift in Sources */,
 				122E8C582C5AC88C00A71DBA /* BLColor.swift in Sources */,
 				122E8C3F2C567AB000A71DBA /* AppDelegate.swift in Sources */,
+				12FC94042C5FA0EB006B500A /* String+Utilities.swift in Sources */,
+				12FC93FD2C5F959B006B500A /* CategoryCollectionViewCell.swift in Sources */,
+				12FC93F92C5D73B7006B500A /* MenuViewController.swift in Sources */,
 				122E8C532C5817B300A71DBA /* SignUpViewController.swift in Sources */,
 				122E8C562C5ABE7100A71DBA /* BLTextField.swift in Sources */,
 				122E8C412C567AB000A71DBA /* SceneDelegate.swift in Sources */,

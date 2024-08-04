@@ -9,15 +9,17 @@ import UIKit
 
 enum BLColor {
     enum Background {
-        static let primary = UIColor.systemBackground
+        static let primary = UIColor(named: "backgroundPrimary")
+        static let reversed = UIColor(named: "backgroundReversed")
     }
     
     enum Button {
-        static let active = UIColor.systemBlue
+        static let active = UIColor(named: "buttonPrimary")
     }
     
     enum Label {
-        static let primary = UIColor.label
+        static let primary = UIColor(named: "labelPrimary")
+        static let primaryReversed = UIColor(named: "labelReversed")
         static let secondary = UIColor.secondaryLabel
         static let tertiary = UIColor.tertiaryLabel
     }
