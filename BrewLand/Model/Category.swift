@@ -11,9 +11,11 @@ struct Category {
     
     var icon: String?
     var title: String
+    var items = [CategoryItem]()
     
-    init(icon: String?, title: String) {
+    init(icon: String?, title: String, items: [CategoryItem]) {
         self.icon = icon
         self.title = title
+        self.items = items
     }
 }

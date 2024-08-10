@@ -15,11 +15,15 @@
 		122E8C532C5817B300A71DBA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E8C522C5817B300A71DBA /* SignUpViewController.swift */; };
 		122E8C562C5ABE7100A71DBA /* BLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E8C552C5ABE7100A71DBA /* BLTextField.swift */; };
 		122E8C582C5AC88C00A71DBA /* BLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E8C572C5AC88C00A71DBA /* BLColor.swift */; };
+		126F3A382C67838900ACF74C /* ItemBackgroudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F3A372C67838900ACF74C /* ItemBackgroudView.swift */; };
 		12FC93F92C5D73B7006B500A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC93F82C5D73B7006B500A /* MenuViewController.swift */; };
 		12FC93FB2C5D752F006B500A /* CategoriesMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC93FA2C5D752F006B500A /* CategoriesMenuView.swift */; };
 		12FC93FD2C5F959B006B500A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC93FC2C5F959B006B500A /* CategoryCollectionViewCell.swift */; };
 		12FC94012C5F9B99006B500A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC94002C5F9B99006B500A /* Category.swift */; };
 		12FC94042C5FA0EB006B500A /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC94032C5FA0EB006B500A /* String+Utilities.swift */; };
+		12FC94072C5FB6EB006B500A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC94062C5FB6EB006B500A /* CategoryView.swift */; };
+		12FC94092C5FB78D006B500A /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC94082C5FB78D006B500A /* CategoryItem.swift */; };
+		12FC940B2C5FB8BB006B500A /* CategoryItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC940A2C5FB8BB006B500A /* CategoryItemCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +37,15 @@
 		122E8C522C5817B300A71DBA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		122E8C552C5ABE7100A71DBA /* BLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTextField.swift; sourceTree = "<group>"; };
 		122E8C572C5AC88C00A71DBA /* BLColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLColor.swift; sourceTree = "<group>"; };
+		126F3A372C67838900ACF74C /* ItemBackgroudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBackgroudView.swift; sourceTree = "<group>"; };
 		12FC93F82C5D73B7006B500A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		12FC93FA2C5D752F006B500A /* CategoriesMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesMenuView.swift; sourceTree = "<group>"; };
 		12FC93FC2C5F959B006B500A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		12FC94002C5F9B99006B500A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		12FC94032C5FA0EB006B500A /* String+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
+		12FC94062C5FB6EB006B500A /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		12FC94082C5FB78D006B500A /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		12FC940A2C5FB8BB006B500A /* CategoryItemCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 				122E8C572C5AC88C00A71DBA /* BLColor.swift */,
 				12FC93F82C5D73B7006B500A /* MenuViewController.swift */,
 				12FC93FE2C5F95A9006B500A /* Categories */,
+				12FC94052C5FB6A8006B500A /* Category */,
 			);
 			path = BrewLand;
 			sourceTree = "<group>";
@@ -108,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				12FC94002C5F9B99006B500A /* Category.swift */,
+				12FC94082C5FB78D006B500A /* CategoryItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +128,16 @@
 				12FC94032C5FA0EB006B500A /* String+Utilities.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		12FC94052C5FB6A8006B500A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				12FC94062C5FB6EB006B500A /* CategoryView.swift */,
+				12FC940A2C5FB8BB006B500A /* CategoryItemCollectionCell.swift */,
+				126F3A372C67838900ACF74C /* ItemBackgroudView.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,12 +212,16 @@
 			files = (
 				122E8C432C567AB000A71DBA /* StartPageViewController.swift in Sources */,
 				12FC94012C5F9B99006B500A /* Category.swift in Sources */,
+				12FC94072C5FB6EB006B500A /* CategoryView.swift in Sources */,
 				12FC93FB2C5D752F006B500A /* CategoriesMenuView.swift in Sources */,
 				122E8C582C5AC88C00A71DBA /* BLColor.swift in Sources */,
 				122E8C3F2C567AB000A71DBA /* AppDelegate.swift in Sources */,
+				12FC940B2C5FB8BB006B500A /* CategoryItemCollectionCell.swift in Sources */,
 				12FC94042C5FA0EB006B500A /* String+Utilities.swift in Sources */,
 				12FC93FD2C5F959B006B500A /* CategoryCollectionViewCell.swift in Sources */,
+				12FC94092C5FB78D006B500A /* CategoryItem.swift in Sources */,
 				12FC93F92C5D73B7006B500A /* MenuViewController.swift in Sources */,
+				126F3A382C67838900ACF74C /* ItemBackgroudView.swift in Sources */,
 				122E8C532C5817B300A71DBA /* SignUpViewController.swift in Sources */,
 				122E8C562C5ABE7100A71DBA /* BLTextField.swift in Sources */,
 				122E8C412C567AB000A71DBA /* SceneDelegate.swift in Sources */,

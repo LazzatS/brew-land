@@ -11,6 +11,7 @@ enum BLColor {
     enum Background {
         static let primary = UIColor(named: "backgroundPrimary")
         static let reversed = UIColor(named: "backgroundReversed")
+        static let purple = UIColor(named: "backgroundPurple")
     }
     
     enum Button {

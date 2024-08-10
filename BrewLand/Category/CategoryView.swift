@@ -1,19 +1,19 @@
 //
-//  CategoriesMenuView.swift
+//  CategoryView.swift
 //  BrewLand
 //
-//  Created by Lazzat Seiilova on 03.08.2024.
+//  Created by Lazzat Seiilova on 04.08.2024.
 //
 
 import UIKit
 
-class CategoriesMenuView: UIView {
+class CategoryView: UIView {
     
-    var categories = [Category]()
+    var category: Category?
     
     private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         let collectionView = UICollectionView(
             frame: .zero, collectionViewLayout: layout
         )
@@ -32,51 +32,47 @@ class CategoriesMenuView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(_ categories: [Category]) {
-        self.categories = categories
+    func configure(_ category: Category) {
+        self.category = category
     }
     
     private func setup() {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.register(CategoryCollectionViewCell.self,
-                                forCellWithReuseIdentifier: CategoryCollectionViewCell.id)
+        collectionView.register(CategoryItemCollectionCell.self,
+                                forCellWithReuseIdentifier: CategoryItemCollectionCell.id)
         
         addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.topAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 60),
+            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
     }
 }
 
-extension CategoriesMenuView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CategoryView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
+        return category?.items.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: CategoryCollectionViewCell.id,
+            withReuseIdentifier: CategoryItemCollectionCell.id,
             for: indexPath
-        ) as? CategoryCollectionViewCell
+        ) as? CategoryItemCollectionCell
         else { return UICollectionViewCell() }
-        cell.configure(category: categories[indexPath.row])
+        cell.configure(category: category?.items[indexPath.row])
         return cell
     }
 }
 
-extension CategoriesMenuView: UICollectionViewDelegateFlowLayout {
+extension CategoryView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height: CGFloat = 40
-        // padding + icon size + padding + label + padding
-        let width: CGFloat = 16 + 24 + 8 + categories[indexPath.row].title.width(
-            withConstrainedHeight: height,
-            font: UIFont.systemFont(ofSize: 18)
-        ) + 16
+        let height: CGFloat = 250
+        let width: CGFloat = (frame.width - 16) / 2  // spacing = 16
         return CGSize(width: width, height: height)
     }
 }
