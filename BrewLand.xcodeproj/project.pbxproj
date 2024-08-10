@@ -16,6 +16,7 @@
 		122E8C562C5ABE7100A71DBA /* BLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E8C552C5ABE7100A71DBA /* BLTextField.swift */; };
 		122E8C582C5AC88C00A71DBA /* BLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E8C572C5AC88C00A71DBA /* BLColor.swift */; };
 		126F3A382C67838900ACF74C /* ItemBackgroudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F3A372C67838900ACF74C /* ItemBackgroudView.swift */; };
+		126F3A3A2C67C9A100ACF74C /* CategoriesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F3A392C67C9A100ACF74C /* CategoriesHeaderView.swift */; };
 		12FC93F92C5D73B7006B500A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC93F82C5D73B7006B500A /* MenuViewController.swift */; };
 		12FC93FB2C5D752F006B500A /* CategoriesMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC93FA2C5D752F006B500A /* CategoriesMenuView.swift */; };
 		12FC93FD2C5F959B006B500A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC93FC2C5F959B006B500A /* CategoryCollectionViewCell.swift */; };
@@ -37,6 +38,7 @@
 		122E8C552C5ABE7100A71DBA /* BLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTextField.swift; sourceTree = "<group>"; };
 		122E8C572C5AC88C00A71DBA /* BLColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLColor.swift; sourceTree = "<group>"; };
 		126F3A372C67838900ACF74C /* ItemBackgroudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBackgroudView.swift; sourceTree = "<group>"; };
+		126F3A392C67C9A100ACF74C /* CategoriesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesHeaderView.swift; sourceTree = "<group>"; };
 		12FC93F82C5D73B7006B500A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		12FC93FA2C5D752F006B500A /* CategoriesMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesMenuView.swift; sourceTree = "<group>"; };
 		12FC93FC2C5F959B006B500A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				12FC93FA2C5D752F006B500A /* CategoriesMenuView.swift */,
 				12FC93FC2C5F959B006B500A /* CategoryCollectionViewCell.swift */,
+				126F3A392C67C9A100ACF74C /* CategoriesHeaderView.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				12FC94092C5FB78D006B500A /* CategoryItem.swift in Sources */,
 				12FC93F92C5D73B7006B500A /* MenuViewController.swift in Sources */,
 				126F3A382C67838900ACF74C /* ItemBackgroudView.swift in Sources */,
+				126F3A3A2C67C9A100ACF74C /* CategoriesHeaderView.swift in Sources */,
 				122E8C532C5817B300A71DBA /* SignUpViewController.swift in Sources */,
 				122E8C562C5ABE7100A71DBA /* BLTextField.swift in Sources */,
 				122E8C412C567AB000A71DBA /* SceneDelegate.swift in Sources */,

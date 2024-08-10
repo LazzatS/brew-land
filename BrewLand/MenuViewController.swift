@@ -86,6 +86,9 @@ class MenuViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        collectionView.register(CategoriesHeaderView.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: CategoriesHeaderView.id)
         collectionView.register(CategoryItemCollectionCell.self,
                                 forCellWithReuseIdentifier: CategoryItemCollectionCell.id)
         
@@ -104,11 +107,13 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return categories.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int
+    ) -> Int {
         return categories[section].items.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: CategoryItemCollectionCell.id,
             for: indexPath
@@ -118,6 +123,18 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.configure(category: categoryItem)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, 
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath
+    ) -> UICollectionReusableView {
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(
+            ofKind: kind, withReuseIdentifier: CategoriesHeaderView.id, for: indexPath
+        ) as? CategoriesHeaderView
+        else { return UICollectionReusableView() }
+        headerView.configure(title: categories[indexPath.section].title)
+        return headerView
+    }
 }
 
 extension MenuViewController: UICollectionViewDelegateFlowLayout {
@@ -125,5 +142,9 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
         let height: CGFloat = 250
         let width: CGFloat = (collectionView.frame.width - 16) / 2  // spacing = 16
         return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 100)
     }
 }
