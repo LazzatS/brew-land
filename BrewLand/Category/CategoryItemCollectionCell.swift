@@ -14,32 +14,46 @@ class CategoryItemCollectionCell: UICollectionViewCell {
     private let iconView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         label.textColor = BLColor.Label.primaryReversed
         label.numberOfLines = 1
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private let stackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 8
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
+    private let priceLabel: UILabel = {
+        let label = UILabel()
+        label.text = "from 4 USD"
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        label.textColor = BLColor.Label.primaryReversed
+        label.numberOfLines = 1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
+    
+    private let sizeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "300 mL"
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        label.textColor = BLColor.Label.primaryReversed
+        label.numberOfLines = 1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let itemBackgroundView = ItemBackgroudView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = .clear
         contentView.layer.cornerRadius = 20
-        contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.black.cgColor
         
-        let itemBackgroundView = ItemBackgroudView()
         itemBackgroundView.backgroundColor = UIColor.clear
         contentView.addSubview(itemBackgroundView)
         itemBackgroundView.translatesAutoresizingMaskIntoConstraints = false
@@ -60,21 +74,39 @@ class CategoryItemCollectionCell: UICollectionViewCell {
     }
     
     func configure(category: CategoryItem?) {
-//        if let iconName = category.icon, !iconName.isEmpty {
-//            iconView.image = UIImage(named: iconName)
-//        }
+        if let iconName = category?.title, !iconName.isEmpty {
+            iconView.image = UIImage(named: iconName)
+        }
         titleLabel.text = category?.title
     }
     
     private func setup() {
-        [iconView, titleLabel].forEach {
-            stackView.addArrangedSubview($0)
+        [iconView, titleLabel, priceLabel, sizeLabel].forEach {
+            contentView.addSubview($0)
         }
         
-        contentView.addSubview(stackView)
+        contentView.addSubview(iconView)
         NSLayoutConstraint.activate([
-            stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            iconView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            iconView.centerYAnchor.constraint(equalTo: itemBackgroundView.topAnchor),
+        ])
+        
+        contentView.addSubview(priceLabel)
+        NSLayoutConstraint.activate([
+            priceLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            priceLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+        ])
+        
+        contentView.addSubview(titleLabel)
+        NSLayoutConstraint.activate([
+            titleLabel.bottomAnchor.constraint(equalTo: priceLabel.topAnchor, constant: -12),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+        ])
+        
+        contentView.addSubview(sizeLabel)
+        NSLayoutConstraint.activate([
+            sizeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            sizeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
         ])
     }
 }
