@@ -11,9 +11,11 @@ struct CategoryItem {
     
     var title: String
     var price: Double
+    var image: String
     
-    init(title: String, price: Double) {
+    init(title: String, price: Double, imageTitle: String) {
         self.title = title
         self.price = price
+        self.image = imageTitle
     }
 }

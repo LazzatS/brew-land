@@ -11,43 +11,43 @@ class MenuViewController: UIViewController {
     
     var categories: [Category] = [
         Category(icon: "coffeeCategory", title: "Coffee", items: [
-            CategoryItem(title: "cappuccinoCup", price: 200),
-            CategoryItem(title: "chocolateCup", price: 200),
-            CategoryItem(title: "espressoCup", price: 200),
-            CategoryItem(title: "flatWhiteCup", price: 200),
-            CategoryItem(title: "latteCup", price: 200),
-            CategoryItem(title: "lavenderCup", price: 200),
-            CategoryItem(title: "mochaCup", price: 200)
+            CategoryItem(title: "Cappuccino", price: 200, imageTitle: "cappuccinoCup"),
+            CategoryItem(title: "Chocolate", price: 200, imageTitle: "chocolateCup"),
+            CategoryItem(title: "Espresso", price: 200, imageTitle: "espressoCup"),
+            CategoryItem(title: "Flat white", price: 200, imageTitle: "flatWhiteCup"),
+            CategoryItem(title: "Latte", price: 200, imageTitle: "latteCup"),
+            CategoryItem(title: "Lavender Raf", price: 200, imageTitle: "lavenderRafCup"),
+            CategoryItem(title: "Mocha", price: 200, imageTitle: "mochaCup")
         ]),
         Category(icon: "teaCategory", title: "Tea", items: [
-            CategoryItem(title: "blackTeaCup", price: 200),
-            CategoryItem(title: "lemonTeaCup", price: 200),
-            CategoryItem(title: "redTeaCup", price: 200),
-            CategoryItem(title: "mangoOolungTeaCup", price: 200),
-            CategoryItem(title: "matchaCup", price: 200)
+            CategoryItem(title: "Black", price: 200, imageTitle: "blackTeaCup"),
+            CategoryItem(title: "Lemon", price: 200, imageTitle: "lemonTeaCup"),
+            CategoryItem(title: "Red", price: 200, imageTitle: "redTeaCup"),
+            CategoryItem(title: "Mango oolung", price: 200, imageTitle: "mangoOolungTeaCup"),
+            CategoryItem(title: "Matcha", price: 200, imageTitle: "matchaCup")
         ]),
         Category(icon: "lemonadeCategory", title: "Lemonade", items: [
-            CategoryItem(title: "orangeLemonadeCup", price: 200)
+            CategoryItem(title: "Orange juice", price: 200, imageTitle: "orangeLemonadeCup")
         ]),
         Category(icon: "croissantCategory", title: "Croissant", items: [
-            CategoryItem(title: "cheeseCroissant", price: 200),
-            CategoryItem(title: "chickenCroissant", price: 200),
-            CategoryItem(title: "eggsCroissant", price: 200),
-            CategoryItem(title: "tunaCroissant", price: 200),
-            CategoryItem(title: "spinachCroissant", price: 200),
-            CategoryItem(title: "shrimpCroissant", price: 200),
-            CategoryItem(title: "mozzarellaCroissant", price: 200),
-            CategoryItem(title: "veganCroissant", price: 200)
+            CategoryItem(title: "Cheese", price: 200, imageTitle: "cheeseCroissant"),
+            CategoryItem(title: "Chicken", price: 200, imageTitle: "chickenCroissant"),
+            CategoryItem(title: "Eggs and vegies", price: 200, imageTitle: "eggsCroissant"),
+            CategoryItem(title: "Tuna", price: 200, imageTitle: "tunaCroissant"),
+            CategoryItem(title: "Spinach", price: 200, imageTitle: "spinachCroissant"),
+            CategoryItem(title: "Shrimp", price: 200, imageTitle: "shrimpCroissant"),
+            CategoryItem(title: "Mozzarella", price: 200, imageTitle: "mozzarellaCroissant"),
+            CategoryItem(title: "Vegan", price: 200, imageTitle: "veganCroissant")
         ]),
         Category(icon: "dessertCategory", title: "Dessert", items: [
-            CategoryItem(title: "carrotCakeDessert", price: 200),
-            CategoryItem(title: "cherryCakeDessert", price: 200),
-            CategoryItem(title: "chocoDessert", price: 200),
-            CategoryItem(title: "raspberryCakeDessert", price: 200),
-            CategoryItem(title: "redVelvetDessert", price: 200),
-            CategoryItem(title: "snickersDessert", price: 200),
-            CategoryItem(title: "truffleDessert", price: 200),
-            CategoryItem(title: "whiteChocoDessert", price: 200),
+            CategoryItem(title: "Carrot cake", price: 200, imageTitle: "carrotCakeDessert"),
+            CategoryItem(title: "Cherry cake", price: 200, imageTitle: "cherryCakeDessert"),
+            CategoryItem(title: "Chocolate", price: 200, imageTitle: "chocoDessert"),
+            CategoryItem(title: "Raspberry", price: 200, imageTitle: "raspberryCakeDessert"),
+            CategoryItem(title: "Red velvet", price: 200, imageTitle: "redVelvetDessert"),
+            CategoryItem(title: "Snickers", price: 200, imageTitle: "snickersDessert"),
+            CategoryItem(title: "Truffle", price: 200, imageTitle: "truffleDessert"),
+            CategoryItem(title: "White chocolate", price: 200, imageTitle: "whiteChocoDessert"),
         ]),
     ]
     

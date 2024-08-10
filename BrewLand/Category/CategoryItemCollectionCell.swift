@@ -21,8 +21,8 @@ class CategoryItemCollectionCell: UICollectionViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        label.textColor = BLColor.Label.primaryReversed
-        label.numberOfLines = 1
+        label.textColor = BLColor.Label.black
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -31,7 +31,7 @@ class CategoryItemCollectionCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "from 4 USD"
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        label.textColor = BLColor.Label.primaryReversed
+        label.textColor = BLColor.Label.black
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -41,7 +41,7 @@ class CategoryItemCollectionCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "300 mL"
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        label.textColor = BLColor.Label.primaryReversed
+        label.textColor = BLColor.Label.black
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -74,7 +74,7 @@ class CategoryItemCollectionCell: UICollectionViewCell {
     }
     
     func configure(category: CategoryItem?) {
-        if let iconName = category?.title, !iconName.isEmpty {
+        if let iconName = category?.image, !iconName.isEmpty {
             iconView.image = UIImage(named: iconName)
         }
         titleLabel.text = category?.title

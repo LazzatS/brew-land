@@ -23,5 +23,6 @@ enum BLColor {
         static let primaryReversed = UIColor(named: "labelReversed")
         static let secondary = UIColor.secondaryLabel
         static let tertiary = UIColor.tertiaryLabel
+        static let black = UIColor(named: "labelBlack")
     }
 }
