@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1226B3252D96D0AB00751815 /* RouteComposer in Frameworks */ = {isa = PBXBuildFile; productRef = 1226B3242D96D0AB00751815 /* RouteComposer */; };
-		1226B3272D96D0AB00751815 /* RouteComposerDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1226B3262D96D0AB00751815 /* RouteComposerDynamic */; };
-		1226B3292D96D0AB00751815 /* RouteComposerStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 1226B3282D96D0AB00751815 /* RouteComposerStatic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,9 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1226B3272D96D0AB00751815 /* RouteComposerDynamic in Frameworks */,
 				1226B3252D96D0AB00751815 /* RouteComposer in Frameworks */,
-				1226B3292D96D0AB00751815 /* RouteComposerStatic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +84,6 @@
 			name = BrewLand;
 			packageProductDependencies = (
 				1226B3242D96D0AB00751815 /* RouteComposer */,
-				1226B3262D96D0AB00751815 /* RouteComposerDynamic */,
-				1226B3282D96D0AB00751815 /* RouteComposerStatic */,
 			);
 			productName = BrewLand;
 			productReference = 1226B30B2D96CF3300751815 /* BrewLand.app */;
@@ -165,7 +159,7 @@
 				INFOPLIST_FILE = BrewLand/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -193,7 +187,7 @@
 				INFOPLIST_FILE = BrewLand/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -367,16 +361,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1226B3232D96D0AB00751815 /* XCRemoteSwiftPackageReference "route-composer" */;
 			productName = RouteComposer;
-		};
-		1226B3262D96D0AB00751815 /* RouteComposerDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1226B3232D96D0AB00751815 /* XCRemoteSwiftPackageReference "route-composer" */;
-			productName = RouteComposerDynamic;
-		};
-		1226B3282D96D0AB00751815 /* RouteComposerStatic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1226B3232D96D0AB00751815 /* XCRemoteSwiftPackageReference "route-composer" */;
-			productName = RouteComposerStatic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
