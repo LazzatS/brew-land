@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1226B3252D96D0AB00751815 /* RouteComposer in Frameworks */ = {isa = PBXBuildFile; productRef = 1226B3242D96D0AB00751815 /* RouteComposer */; };
+		1226B3272D96D0AB00751815 /* RouteComposerDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1226B3262D96D0AB00751815 /* RouteComposerDynamic */; };
+		1226B3292D96D0AB00751815 /* RouteComposerStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 1226B3282D96D0AB00751815 /* RouteComposerStatic */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1226B30B2D96CF3300751815 /* BrewLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1226B3272D96D0AB00751815 /* RouteComposerDynamic in Frameworks */,
+				1226B3252D96D0AB00751815 /* RouteComposer in Frameworks */,
+				1226B3292D96D0AB00751815 /* RouteComposerStatic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,9 @@
 			);
 			name = BrewLand;
 			packageProductDependencies = (
+				1226B3242D96D0AB00751815 /* RouteComposer */,
+				1226B3262D96D0AB00751815 /* RouteComposerDynamic */,
+				1226B3282D96D0AB00751815 /* RouteComposerStatic */,
 			);
 			productName = BrewLand;
 			productReference = 1226B30B2D96CF3300751815 /* BrewLand.app */;
@@ -107,6 +119,9 @@
 			);
 			mainGroup = 1226B3022D96CF3300751815;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1226B3232D96D0AB00751815 /* XCRemoteSwiftPackageReference "route-composer" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1226B30C2D96CF3300751815 /* Products */;
 			projectDirPath = "";
@@ -335,6 +350,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1226B3232D96D0AB00751815 /* XCRemoteSwiftPackageReference "route-composer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ekazaev/route-composer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1226B3242D96D0AB00751815 /* RouteComposer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1226B3232D96D0AB00751815 /* XCRemoteSwiftPackageReference "route-composer" */;
+			productName = RouteComposer;
+		};
+		1226B3262D96D0AB00751815 /* RouteComposerDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1226B3232D96D0AB00751815 /* XCRemoteSwiftPackageReference "route-composer" */;
+			productName = RouteComposerDynamic;
+		};
+		1226B3282D96D0AB00751815 /* RouteComposerStatic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1226B3232D96D0AB00751815 /* XCRemoteSwiftPackageReference "route-composer" */;
+			productName = RouteComposerStatic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1226B3032D96CF3300751815 /* Project object */;
 }

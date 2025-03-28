@@ -1,0 +1,15 @@
+{
+  "originHash" : "81b9d3a6ed3e8625493b2f83140f5a79e39e7a08d5d6e38c78d1f87d5bc78ead",
+  "pins" : [
+    {
+      "identity" : "route-composer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ekazaev/route-composer",
+      "state" : {
+        "revision" : "a560eae9f43d64f379cefcac3c338f86179e8cdf",
+        "version" : "2.11.1"
+      }
+    }
+  ],
+  "version" : 3
+}
