@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RouteComposer
 
-class HomeAssembly {
+class HomeAssembly: Factory {
     
-    func build() -> UIViewController {
+    typealias ViewController = HomeViewController
+    typealias Context = Any?
+    
+    func build(with context: Any?) throws -> HomeViewController {
         let view = HomeViewController()
         let interactor = HomeInteractor()
         let router = HomeRouter()
@@ -22,5 +26,4 @@ class HomeAssembly {
         
         return view
     }
-    
 }

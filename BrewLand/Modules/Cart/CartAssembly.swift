@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RouteComposer
 
-class CartAssembly {
+class CartAssembly: Factory {
     
-    func build() -> UIViewController {
+    typealias ViewController = CartViewController
+    typealias Context = Any?
+    
+    func build(with context: Any?) throws -> CartViewController {
         let view = CartViewController()
         let interactor = CartInteractor()
         let router = CartRouter()
@@ -22,5 +26,4 @@ class CartAssembly {
         
         return view
     }
-    
 }

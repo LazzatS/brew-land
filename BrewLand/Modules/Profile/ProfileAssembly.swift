@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RouteComposer
 
-class ProfileAssembly {
+class ProfileAssembly: Factory {
     
-    func build() -> UIViewController {
+    typealias ViewController = ProfileViewController
+    typealias Context = Any?
+    
+    func build(with context: Any?) throws -> ProfileViewController {
         let view = ProfileViewController()
         let interactor = ProfileInteractor()
         let router = ProfileRouter()
@@ -22,5 +26,4 @@ class ProfileAssembly {
         
         return view
     }
-    
 }

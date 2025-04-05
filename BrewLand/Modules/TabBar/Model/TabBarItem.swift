@@ -19,8 +19,8 @@ enum TabBarItem: Int {
         case .home:
             return TabBarIcon(
                 title: "Home",
-                image: UIImage(systemName: "home_tab"),
-                selectedImage: UIImage(systemName: "home_tab_selected")
+                image: UIImage(named: "home_tab"),
+                selectedImage: UIImage(named: "home_tab_selected")
             )
         case .favourites:
             return TabBarIcon(

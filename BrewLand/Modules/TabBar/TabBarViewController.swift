@@ -11,4 +11,16 @@ import UIKit
 class TabBarViewController: UITabBarController, TabBarViewProtocol {
     var presenter: TabBarPresenterProtocol!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        delegate = self
+        UITabBar.appearance().barTintColor = .purple
+        UITabBar.appearance().unselectedItemTintColor = .carrot
+    }
+}
+
+extension TabBarViewController: UITabBarControllerDelegate {
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("ok")
+    }
 }

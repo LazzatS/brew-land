@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RouteComposer
 
-class LocationAssembly {
+class LocationAssembly: Factory {
     
-    func build() -> UIViewController {
+    typealias ViewController = LocationViewController
+    typealias Context = Any?
+    
+    func build(with context: Any?) throws -> LocationViewController {
         let view = LocationViewController()
         let interactor = LocationInteractor()
         let router = LocationRouter()
@@ -22,5 +26,4 @@ class LocationAssembly {
         
         return view
     }
-    
 }

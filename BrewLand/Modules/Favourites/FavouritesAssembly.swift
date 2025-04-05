@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RouteComposer
 
-class FavouritesAssembly {
+class FavouritesAssembly: Factory {
     
-    func build() -> UIViewController {
+    typealias ViewController = FavouritesViewController
+    typealias Context = Any?
+    
+    func build(with context: Any?) throws -> FavouritesViewController {
         let view = FavouritesViewController()
         let interactor = FavouritesInteractor()
         let router = FavouritesRouter()
@@ -22,5 +26,4 @@ class FavouritesAssembly {
         
         return view
     }
-    
 }
