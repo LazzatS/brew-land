@@ -54,6 +54,6 @@ class PinCodeViewController: UIViewController {
     }
     
     private func goToProfile() {
-        try? router.navigate(to: Screens.profileScreen(), animated: true, completion: nil)
+//        try? router.navigate(to: Screens.profileScreen(), animated: true, completion: nil)
     }
 }

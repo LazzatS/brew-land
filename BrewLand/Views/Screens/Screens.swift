@@ -29,7 +29,7 @@ enum Screens {
         .from(GeneralStep.current())
         .assemble()
     }
-    
+    /*
     static func profileScreen() -> DestinationStep<ProfileViewController, Any?> {
         StepAssembly(
             finder: ClassFinder<ProfileViewController, Any?>(),
@@ -39,23 +39,5 @@ enum Screens {
         .from(GeneralStep.current())
         .assemble()
     }
-}
-
-// TODO: Temp
-struct ProfileScreenFactory: Factory {
-    typealias ViewController = ProfileViewController
-    typealias Context = Any?
-    
-    func build(with context: Any?) throws -> ProfileViewController {
-        let view = ProfileViewController()
-        return view
-    }
-}
-
-class ProfileViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Profile"
-        view.backgroundColor = .systemPurple
-    }
+    */
 }
