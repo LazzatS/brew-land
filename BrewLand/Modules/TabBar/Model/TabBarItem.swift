@@ -25,26 +25,26 @@ enum TabBarItem: Int {
         case .favourites:
             return TabBarIcon(
                 title: "Favourites",
-                image: UIImage(systemName: "circle"),
-                selectedImage: UIImage(systemName: "circle")
+                image: UIImage(named: "favourites_tab"),
+                selectedImage: UIImage(named: "favourites_tab_selected")
             )
         case .cart:
             return TabBarIcon(
                 title: "Cart",
-                image: UIImage(systemName: "circle"),
-                selectedImage: UIImage(systemName: "circle")
+                image: UIImage(named: "cart_tab"),
+                selectedImage: UIImage(named: "cart_tab_selected")
             )
         case .location:
             return TabBarIcon(
                 title: "Location",
-                image: UIImage(systemName: "circle"),
-                selectedImage: UIImage(systemName: "circle")
+                image: UIImage(named: "location_tab"),
+                selectedImage: UIImage(named: "location_tab_selected")
             )
         case .profile:
             return TabBarIcon(
                 title: "Profile",
-                image: UIImage(systemName: "circle"),
-                selectedImage: UIImage(systemName: "circle")
+                image: UIImage(named: "profile_tab"),
+                selectedImage: UIImage(named: "profile_tab_selected")
             )
         }
     }
