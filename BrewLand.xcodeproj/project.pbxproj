@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1226B3252D96D0AB00751815 /* RouteComposer in Frameworks */ = {isa = PBXBuildFile; productRef = 1226B3242D96D0AB00751815 /* RouteComposer */; };
+		12B1A9252DA2705200CDD6FE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 12B1A9242DA2705200CDD6FE /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1226B3252D96D0AB00751815 /* RouteComposer in Frameworks */,
+				12B1A9252DA2705200CDD6FE /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,7 @@
 			name = BrewLand;
 			packageProductDependencies = (
 				1226B3242D96D0AB00751815 /* RouteComposer */,
+				12B1A9242DA2705200CDD6FE /* SnapKit */,
 			);
 			productName = BrewLand;
 			productReference = 1226B30B2D96CF3300751815 /* BrewLand.app */;
@@ -115,6 +118,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				1226B3232D96D0AB00751815 /* XCRemoteSwiftPackageReference "route-composer" */,
+				12B1A9232DA2705200CDD6FE /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1226B30C2D96CF3300751815 /* Products */;
@@ -354,6 +358,14 @@
 				minimumVersion = 2.11.1;
 			};
 		};
+		12B1A9232DA2705200CDD6FE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -361,6 +373,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1226B3232D96D0AB00751815 /* XCRemoteSwiftPackageReference "route-composer" */;
 			productName = RouteComposer;
+		};
+		12B1A9242DA2705200CDD6FE /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12B1A9232DA2705200CDD6FE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

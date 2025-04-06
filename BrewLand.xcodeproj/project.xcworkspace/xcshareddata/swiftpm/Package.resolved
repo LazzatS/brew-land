@@ -1,5 +1,5 @@
 {
-  "originHash" : "81b9d3a6ed3e8625493b2f83140f5a79e39e7a08d5d6e38c78d1f87d5bc78ead",
+  "originHash" : "8c77de56ee96591ca2516210b4015df72d3d7a4208319e17805c8114b051fe23",
   "pins" : [
     {
       "identity" : "route-composer",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "a560eae9f43d64f379cefcac3c338f86179e8cdf",
         "version" : "2.11.1"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
       }
     }
   ],
