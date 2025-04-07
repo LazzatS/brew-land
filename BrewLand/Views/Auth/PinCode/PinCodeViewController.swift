@@ -6,54 +6,132 @@
 //
 
 import UIKit
+import SnapKit
 
-class PinCodeViewController: UIViewController {
+class PinCodeViewController: UIViewController, PinCodeViewProtocol {
+    
+    // MARK: - Properties
+    var presenter: PinCodePresenterProtocol?
     
     // MARK: - UI Elements
-    private let titleLabel = UILabel()
-    private let pinCodeButton = UIButton()
+    private let dotsView = PinDotsView()
     
-    // MARK: - Lifecycle Methods
+    private lazy var keypadView: PinKeypadView = {
+        let keypadView = PinKeypadView()
+        keypadView.delegate = self
+        return keypadView
+    }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = PinCodeConstants.titleText
+        label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+        label.textAlignment = .center
+        label.textColor = .label
+        return label
+    }()
+    
+    private let forgotPinButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle(PinCodeConstants.forgotPinText, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.tintColor = .systemBlue
+        return button
+    }()
+    
+    private let messageLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .systemGray
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.numberOfLines = 0
+        label.isHidden = true
+        return label
+    }()
+    
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        view.backgroundColor = BrewLandColor.Background.default
+        presenter?.viewDidLoad()
     }
     
     // MARK: - UI Setup
-    private func setupUI() {
-        view.backgroundColor = .white
+    func setupViews(showForgotPinButton: Bool, mode: PinCodeMode) {
+        
+        [keypadView, dotsView, titleLabel, messageLabel].forEach {
+            view.addSubview($0)
+        }
+        
+        if showForgotPinButton && mode == .verify {
+            view.addSubview(forgotPinButton)
+        }
+        
+        setupConstraints(showForgotPinButton: showForgotPinButton)
+    }
+    
+    func addTargets() {
+        // TODO: add button targets
+    }
+    
+    // MARK: - Update methods
+    func updateDotsView(enteredDigits: Int) {
+        print("number of enteredDigits \(enteredDigits)")
+        dotsView.colorDots(enteredDigits: enteredDigits)
+    }
+    
+    func showError(message: String) {
+        print("error message = \(message)")
+        dotsView.clearDots()
+    }
+    
+    
+}
+
+extension PinCodeViewController: PinKeypadDelegate {
+    func addDigit(number: Int) {
+        presenter?.addPinDigit(number: number)
+    }
+    
+    func removeLastDigit() {
+        // TODO: remove last pin
+    }
+}
+
+extension PinCodeViewController {
+    private func setupConstraints(showForgotPinButton: Bool = false) {
+        
+        // Keypad
+        keypadView.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
+        }
+        
+        // Pin Dots
+        dotsView.snp.makeConstraints {
+            $0.bottom.equalTo(keypadView.snp.top).offset(-32)
+            $0.centerX.equalToSuperview()
+        }
         
         // Title Label
-        titleLabel.text = "No PIN, just"
-        titleLabel.textAlignment = .center
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(titleLabel)
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-        
-        // TODO: temp Button
-        pinCodeButton.setTitle("click to enter", for: .normal)
-        pinCodeButton.backgroundColor = .systemGreen
-        pinCodeButton.translatesAutoresizingMaskIntoConstraints = false
-        pinCodeButton.addTarget(self, action: #selector(validatePin), for: .touchUpInside)
-        view.addSubview(pinCodeButton)
-        NSLayoutConstraint.activate([
-            pinCodeButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
-            pinCodeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            pinCodeButton.widthAnchor.constraint(equalToConstant: 150),
-            pinCodeButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
-    }
-    
-    @objc func validatePin() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-            self.goToProfile()
+        titleLabel.snp.makeConstraints {
+            $0.bottom.equalTo(dotsView.snp.top).offset(-32)
+            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.top.lessThanOrEqualTo(view.safeAreaLayoutGuide).inset(16).priority(.low)
         }
-    }
-    
-    private func goToProfile() {
-        try? router.navigate(to: Screens.tabBarScreen(), animated: true, completion: nil)
+        
+        // Message Label
+        messageLabel.snp.makeConstraints {
+            $0.top.equalTo(keypadView.snp.bottom).offset(16)
+            $0.leading.trailing.equalToSuperview().inset(16)
+        }
+        
+        // Forgot PIN Button
+        if showForgotPinButton {
+            forgotPinButton.snp.makeConstraints {
+                $0.top.equalTo(messageLabel.snp.bottom).offset(16)
+                $0.centerX.equalToSuperview()
+                $0.height.equalTo(30)
+            }
+        }
     }
 }
