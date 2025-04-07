@@ -11,4 +11,8 @@ import UIKit
 class CartViewController: UIViewController, CartViewProtocol {
     var presenter: CartPresenterProtocol!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemRed
+    }
 }

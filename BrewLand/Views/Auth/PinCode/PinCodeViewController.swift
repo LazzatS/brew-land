@@ -27,7 +27,7 @@ class PinCodeViewController: UIViewController, PinCodeViewProtocol {
         label.text = PinCodeConstants.titleText
         label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
         label.textAlignment = .center
-        label.textColor = .label
+        label.textColor = BrewLandColor.Label.primaryDynamic
         return label
     }()
     
@@ -35,14 +35,14 @@ class PinCodeViewController: UIViewController, PinCodeViewProtocol {
         let button = UIButton(type: .system)
         button.setTitle(PinCodeConstants.forgotPinText, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        button.tintColor = .systemBlue
+        button.tintColor = BrewLandColor.Action.enabled
         return button
     }()
     
     private let messageLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor = .systemGray
+        label.textColor = BrewLandColor.Label.secondaryDynamic
         label.font = UIFont.systemFont(ofSize: 14)
         label.numberOfLines = 0
         label.isHidden = true

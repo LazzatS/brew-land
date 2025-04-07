@@ -11,4 +11,8 @@ import UIKit
 class LocationViewController: UIViewController, LocationViewProtocol {
     var presenter: LocationPresenterProtocol!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemPurple
+    }
 }

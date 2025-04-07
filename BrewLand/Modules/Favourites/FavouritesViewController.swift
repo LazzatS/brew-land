@@ -11,4 +11,8 @@ import UIKit
 class FavouritesViewController: UIViewController, FavouritesViewProtocol {
     var presenter: FavouritesPresenterProtocol!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemCyan
+    }
 }

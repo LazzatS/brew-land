@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = .systemCyan
+        window?.backgroundColor = BrewLandColor.Theme.lavander
         let router = MainRouter(router: DefaultRouter(), window: window)
         self.router = router
         window?.makeKeyAndVisible()

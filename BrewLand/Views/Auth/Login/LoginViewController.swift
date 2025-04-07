@@ -42,7 +42,8 @@ class LoginViewController: UIViewController {
             loginButton.addTarget(self, action: #selector(didTapLogin), for: .touchUpInside)
         } else {
             DispatchQueue.main.async {
-                try? UIViewController.router.navigate(to: Screens.pinCodeScreen(), with: PinCodeContext(), animated: true, completion: nil)
+                let context = PinCodeContext()
+                try? UIViewController.router.navigate(to: Screens.pinCodeScreen(), with: context, animated: true, completion: nil)
             }
         }
         

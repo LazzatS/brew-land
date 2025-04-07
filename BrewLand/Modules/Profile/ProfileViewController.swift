@@ -11,4 +11,8 @@ import UIKit
 class ProfileViewController: UIViewController, ProfileViewProtocol {
     var presenter: ProfilePresenterProtocol!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemIndigo
+    }
 }
